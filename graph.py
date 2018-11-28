@@ -1,25 +1,32 @@
 class Graph(object):
+    V = None
+    E = None
+    directed = None
+    adj = None
     """docstring for Graph."""
     def __init__(self, V = [], E = [], directed = False):
         self.V = V
         self.E = E
         self.directed = directed
         self.adj = {}
+    def addVertex(self,value):
+        u = Vertex(value=value)
+        self.V.append(u)
+        self.adj[u] = []
 
-    def addEdge(u,v,weight):
+    def addEdge(self,u,v,weight):
         e = Edge(u,v,weight)
-        if u not in self.adj:
-            self.adj[u] = [e]
-        else:
-            self.adj[u].append(e)
-        if not directed:
+        self.adj[u].append(e)
+        self.E.append(e)
+        if not self.directed:
             f = Edge(v, u, weight)
             if v not in self.adj:
-                self.adj[v] = [f]
-            else:
-                self.adj[u].append(f)
+                self.adj[v].append(f)
 
 class Vertex(object):
+    value = None
+    d = None
+    pre = None
     """docstring for Vertex."""
     def __init__(self, value = None, d = None, pre = None):
         self.value = value
@@ -27,8 +34,16 @@ class Vertex(object):
         self.pre = pre
 
 class Edge(object):
+    u = None
+    v = None
+    weight = None
     """docstring for Edge."""
     def __init__(self, u = None, v = None, weight = None):
         self.u = u
         self.v = v
         self.weight = weight
+
+    def equals(self,other):
+        if self.u == other.u and self.v == other.v:
+            return True
+        return False
