@@ -1,14 +1,11 @@
 class Graph(object):
-    V = None
-    E = None
-    directed = None
-    adj = None
     """docstring for Graph."""
     def __init__(self, V = [], E = [], directed = False):
         self.V = V
         self.E = E
         self.directed = directed
         self.adj = {}
+
     def addVertex(self,value):
         u = Vertex(value=value)
         self.V.append(u)
@@ -24,9 +21,6 @@ class Graph(object):
                 self.adj[v].append(f)
 
 class Vertex(object):
-    value = None
-    d = None
-    pre = None
     """docstring for Vertex."""
     def __init__(self, value = None, d = None, pre = None):
         self.value = value
@@ -34,9 +28,6 @@ class Vertex(object):
         self.pre = pre
 
 class Edge(object):
-    u = None
-    v = None
-    weight = None
     """docstring for Edge."""
     def __init__(self, u = None, v = None, weight = None):
         self.u = u

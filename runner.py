@@ -1,41 +1,41 @@
 from graph import *
-import random
+import pickle
 import variants
+import argparse
+import time
 
+PATH = "graphs\\"
 
-def genGraph(num, edgeCap, weightMax, weightMin = 0):
-    G = Graph(directed = True)
-    for i in range(0, num):
-        G.addVertex(i)
-    for u in G.V:
-        edgeNum = random.randint(1, edgeCap)
-        for i in range(edgeNum):
-            success = False
-            while not success:
-                v = G.V[random.randint(0,len(G.V)-1)]
-
-                if u == v:
-                    continue
-
-                edge = Edge(u,v,random.randint(weightMin, weightMax))
-                same = False
-
-                for e in G.adj[u]:
-                    if edge.equals(e):
-                        same = True
-                        break
-
-                if not same:
-                    G.addEdge(edge.u, edge.v, weight = edge.weight)
-                    success = True
+def readGraphList(f):
+    file = open(f, 'rb')
+    G = pickle.load(file)
+    file.close()
     return G
 
-def main():
-    G = genGraph(100, 10, 5)
 
-    for v in variants.dijkstra(G, G.V[0]):
-        print(v.value, end = ", ")
-    print()
-    print(variants.bellmanFord(G, G.V[0]))
+def parse():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('f', action='store', type = str, help='File name')
+    return parser.parse_args()
+
+
+def main():
+    args = parse()
+    print("Loading graph list" + args.f + "...")
+    graphList = readGraphList(PATH + args.f)
+    print("Loading Complete.")
+    print("Beginning to calculate run time.")
+    for G in graphList:
+        print("Graph info: \n\tDirected: " + str(G.directed) + "\n\tVertex Count: " + str(len(G.V)) + "\n\tEdge Count: " + str(len(G.E)))
+        print("Solving for shortest path...")
+        start = round(time.clock() * 10000)
+        print(start)
+        variants.dijkstra(G, G.V[0])
+        end = round(time.clock() * 10000)
+        print()
+        print(end)
+        print("Run Time: ", str(end-start))
+        print(variants.bellmanFord(G, G.V[0]))
+        print("Solution complete.")
 
 main()
