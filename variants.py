@@ -39,3 +39,27 @@ def dijkstra(G, s):
         for e in G.adj[u]:
             relax(e.u, e.v, e.weight)
     return S
+
+def Yen(G, s):
+    initSingleSource(G,s) #number vertices arbitrarily from s
+    C = [s]
+    D = []
+    while C != []:
+        for u in G.V:
+            edges = G.adj[u]
+            if u in C or D != []:
+                for uv in edges:
+                    D.append(uv)
+                    relax(uv.u, uv.v, uv.weight)
+        for i in range(len(G.V-1,0,-1)):
+            u = G.V[u]
+            edges = G.adj[u]
+            if u in C or D != []:
+                for uv in edges:
+                    D.append(uv)
+                    relax(uv.u, uv.v, uv.weight)
+        C = []
+        for k in D:
+            C.append(k.u)
+            C.append(k.v)
+        D = []
