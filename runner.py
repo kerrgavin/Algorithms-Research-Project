@@ -1,5 +1,8 @@
 from graph import *
-import pickle
+try:
+    import cPickle as pickle
+except:
+    import pickle
 import variants
 import argparse
 import time
@@ -25,51 +28,65 @@ def parse():
     return parser.parse_args()
 
 def getTimeDijkstra(G):
-    times = []
-    for i in range(0,3):
+    avg = 0
+    for i in range(0,10):
         start = round(time.clock() * 10000)
         variants.dijkstra(G, G.V[0])
         end = round(time.clock() * 10000)
-        times.append(end-start)
-    avg = (times[0] + times[0] + times[0])/3
+        avg += (end-start)
+    avg = avg / 10
     return avg
 
 def getTimeBellmanFord(G):
-    times = []
-    for i in range(0,3):
+    avg = 0
+    for i in range(0,10):
         start = round(time.clock() * 10000)
         variants.bellmanFord(G, G.V[0])
         end = round(time.clock() * 10000)
-        times.append(end-start)
-    avg = (times[0] + times[0] + times[0])/3
+        avg += (end-start)
+    avg = avg / 10
     return avg
 
 def main():
     data = {"vertices":0, "dijkstra": [], "bellmanford": [], "edges": []}
     args = parse()
-    print("Loading graph list " + args.f + "...")
-    graphList = readGraphList(args.f)
-    print("Loading Complete.")
-    print("Beginning to calculate run time.")
-    for G in graphList:
-        data["vertices"] = len(G.V)
-        data["edges"].append(len(G.E))
 
-        print("Graph info: \n\tDirected: " + str(G.directed) + "\n\tVertex Count: " + str(len(G.V)) + "\n\tEdge Count: " + str(len(G.E)))
-        print("Calculating average time for shortest path...")
+    print("Beginning to calculate run times...")
 
-        avg = getTimeDijkstra(G)
-        data["dijkstra"].append(avg)
+    inputdata = open(str(INPUTPATH + args.f),"rb")
+    index = 1
+    try:
+        while True :
+            try:
+                print("Loading graph data...")
+                G = pickle.load(inputdata)
+                print("Loading Complete.")
 
-        print("Dijkstra Run Time: ", data["dijkstra"][-1])
+                data["vertices"] = len(G.V)
+                data["edges"].append(len(G.E))
 
-        avg = getTimeBellmanFord(G)
-        data["bellmanford"].append(avg)
-        print("Bellman-Ford Run Time: ", data["bellmanford"][-1])
-        print("Solution complete.")
+                print("Graph " + str(index) + " out of " + str((int(data["vertices"])-1))+ " info: \n\tDirected: " + str(G.directed) + "\n\tVertex Count: " + str(len(G.V)) + "\n\tEdge Count: " + str(len(G.E)))
+                print("Calculating average time for shortest path...")
 
-        print("Writing data to " + args.o + "...")
-        writeData(data, args.o)
-        print("Data written")
+                avg = getTimeDijkstra(G)
+                data["dijkstra"].append(avg)
+                print("Dijkstra Run Time: ", data["dijkstra"][-1])
+
+                avg = getTimeBellmanFord(G)
+                data["bellmanford"].append(avg)
+                print("Bellman-Ford Run Time: ", data["bellmanford"][-1])
+                G = None
+                index+=1
+            except EOFError:
+                break
+    finally:
+        inputdata.close()
+
+    print("Finished calculations.")
+
+    print("Writing data to " + args.o + "...")
+    writeData(data, args.o)
+    print("Data written.")
+
 
 main()

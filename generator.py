@@ -1,12 +1,15 @@
 from graph import *
-import pickle
+try:
+    import cPickle as pickle
+except:
+    import pickle
 import random
 import argparse
 
 PATH = "graphs\\"
 
 def pickleGraphList(G, f):
-    file = open(f, 'wb')
+    file = open(f, 'ab')
     pickle.dump(G, file)
     file.close()
 
@@ -14,8 +17,15 @@ def genGraph(num, edgeCap, weightMax, weightMin = 0):
     G = Graph(V=[],E=[],directed = True)
     for i in range(0, num):
         G.addVertex(i)
+    Q = G.V[:]
+    while len(Q) > 0:
+        v = Q[0]
+        while not v == Q[0]:
+            v = Q[random.randint(0,len()-1)]
+        G.addEdge(Q[0], v, random.randint(weightMin, weightMax))
+        Q.pop(0)
     for u in G.V:
-        for i in range(edgeCap):
+        for i in range(edgeCap - 1):
             success = False
             while not success:
                 v = G.V[random.randint(0,len(G.V)-1)]
@@ -47,14 +57,16 @@ def parse():
 
 def main():
     args = parse()
-    print("Generating graph list " +  args.f + "...")
-    graphList = []
+    print("Generating data set " +  args.f + "...")
     for i in range(1, args.v):
+        print("Generating graph with edge cap " + str(i) + "...")
         G = genGraph(args.v, i, args.max, args.min)
-        graphList.append(G)
-    print("Generation complete.")
-    pickleGraphList(graphList, PATH + str(args.f))
-    print("File save")
+        print("Generation complete.")
+        print("Saving to file...")
+        pickleGraphList(G, PATH + str(args.f))
+        print("File saved.")
+        G = None
+    print("Data set generated and saved.")
 
 
 main()
