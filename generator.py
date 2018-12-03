@@ -20,8 +20,9 @@ def genGraph(num, edgeCap, weightMax, weightMin = 0):
     Q = G.V[:]
     while len(Q) > 0:
         v = Q[0]
-        while not v == Q[0]:
-            v = Q[random.randint(0,len()-1)]
+        while v == Q[0] and len(Q) != 1:
+            v = Q[random.randint(0,len(Q)-1)]
+            print(v.value)
         G.addEdge(Q[0], v, random.randint(weightMin, weightMax))
         Q.pop(0)
     for u in G.V:

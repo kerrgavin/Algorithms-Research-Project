@@ -37,6 +37,16 @@ def getTimeDijkstra(G):
     avg = avg / 10
     return avg
 
+def getTimeYen(G):
+    avg = 0
+    for i in range(0,10):
+        start = round(time.clock() * 10000)
+        variants.Yen(G, G.V[0])
+        end = round(time.clock() * 10000)
+        avg += (end-start)
+    avg = avg / 10
+    return avg
+
 def getTimeBellmanFord(G):
     avg = 0
     for i in range(0,10):
@@ -75,6 +85,9 @@ def main():
                 avg = getTimeBellmanFord(G)
                 data["bellmanford"].append(avg)
                 print("Bellman-Ford Run Time: ", data["bellmanford"][-1])
+
+                for s in variants.fibDijkstra(G, G.V[0]):
+                    print(s.value)
                 G = None
                 index+=1
             except EOFError:

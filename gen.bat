@@ -1,0 +1,21 @@
+@echo off
+python generator.py 25 100 graph-25
+python generator.py 50 100 graph-50
+python generator.py 75 100 graph-75
+python generator.py 100 100 graph-100
+python generator.py 125 100 graph-125
+python generator.py 150 100 graph-150
+python generator.py 175 100 graph-175
+python generator.py 200 100 graph-200
+python generator.py 225 100 graph-225
+python generator.py 250 100 graph-250
+python generator.py 275 100 graph-275
+python generator.py 300 100 graph-300
+python generator.py 325 100 graph-325
+python generator.py 350 100 graph-350
+python generator.py 375 100 graph-375
+python generator.py 400 100 graph-400
+python generator.py 425 100 graph-425
+python generator.py 450 100 graph-450
+python generator.py 475 100 graph-475
+python generator.py 500 100 graph-500

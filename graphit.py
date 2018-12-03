@@ -32,10 +32,10 @@ def main():
     print("Axes plotted.")
 
     print("Plotting graph...")
-    plt.plot(x1, y1)
-    plt.plot(x2, y2)
+    plt.plot(x1, y1, label="Dijkstra")
+    plt.plot(x2, y2, label="Bellman-Ford")
     print("Graph plotted.")
-
+    plt.legend(loc='best')
     print("Generating graph labels...")
     plt.xlabel("Edges")
     plt.ylabel("Times")
