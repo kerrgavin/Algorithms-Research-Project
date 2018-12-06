@@ -87,7 +87,7 @@ def main():
                 print("Bellman-Ford Run Time: ", data["bellmanford"][-1])
 
                 for s in variants.fibDijkstra(G, G.V[0]):
-                    print(s.value)
+                    print(s)
                 G = None
                 index+=1
             except EOFError:

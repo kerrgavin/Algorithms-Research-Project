@@ -19,7 +19,7 @@ def parse():
 
 def main():
     args = parse()
-    print("Reading in data from" + args.f + "...")
+    print("Reading in data from " + args.f + "...")
     data = jsonToDict(args.f)
     print("Data read.")
 

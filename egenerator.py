@@ -36,7 +36,7 @@ def genGraph(num, edgeCap, weightMax, weightMin = 0):
                 edge = Edge(u,v,random.randint(weightMin, weightMax))
                 same = False
 
-                for e in G.adj[u]:
+                for e in G.getAdj(u):
                     if edge.equals(e):
                         same = True
                         break

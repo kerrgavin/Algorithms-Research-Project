@@ -1,0 +1,3035 @@
+Beginning to calculate run times...
+Loading graph data...
+Loading Complete.
+Graph 1 out of 8 info: 
+	Directed: True
+	Vertex Count: 9
+	Edge Count: 9
+Calculating average time for shortest path...
+Dijkstra Run Time:  0.3
+Bellman-Ford Run Time:  0.4
+Value: 0
+Edges:
+	 0 1 52
+Value: 1
+Edges:
+	 1 2 90
+Value: 2
+Edges:
+	 2 3 45
+Value: 3
+Edges:
+	 3 4 100
+Value: 4
+Edges:
+	 4 5 85
+Value: 5
+Edges:
+	 5 6 4
+Value: 6
+Edges:
+	 6 7 30
+Value: 7
+Edges:
+	 7 8 65
+Value: 8
+Edges:
+	 8 0 65
+inserting value: 1
+Megring root: 1
+root is none
+	right is: 1
+inserting value: 2
+Megring root: 2
+Right: 1
+New right: 1
+	right is: 1
+inserting value: 3
+Megring root: 3
+Right: 2
+New right: 2
+	right is: 2
+inserting value: 4
+Megring root: 4
+Right: 3
+New right: 3
+	right is: 3
+inserting value: 5
+Megring root: 5
+Right: 4
+New right: 4
+	right is: 4
+inserting value: 6
+Megring root: 6
+Right: 5
+New right: 5
+	right is: 5
+inserting value: 7
+Megring root: 7
+Right: 6
+New right: 6
+	right is: 6
+inserting value: 8
+Megring root: 8
+Right: 7
+New right: 7
+	right is: 7
+inserting value: 9
+Megring root: 9
+Right: 8
+New right: 8
+	right is: 8
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A40F0>
+Head: 1
+Node is: 1 0 2
+Node is: 9 inf 1
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 1 0 2
+[0, inf, inf, inf, inf, inf, inf, inf, inf]
+looping
+Extracting min
+	Not none
+Head: 9
+Node is: 9 inf 2
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 9 inf 2
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4160>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 8
+Current: 0
+Distances: [0, inf, inf, inf, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4470>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 3
+Node is: 3 inf 4
+Node is: 6 inf 3
+Node is: 4 inf 6
+Node is: 3 inf 4
+	Children attached to root
+Megring root: 3
+Right: 2
+New right: 2
+Megring root: 6
+Right: 3
+New right: 3
+Megring root: 4
+Right: 6
+New right: 6
+Head: 4
+Node is: 4 inf 3
+Node is: 6 inf 4
+Node is: 3 inf 6
+Node is: 4 inf 3
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A41D0>
+	 3
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4240>
+	 4
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4320>
+	 6
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 7
+Current: 1
+Distances: [0, 52, inf, inf, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4240>
+looping
+Extracting min
+	Not none
+Head: 4
+Node is: 4 inf 6
+Node is: 6 inf 4
+Node is: 4 inf 6
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4240>
+	 4
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4320>
+	 6
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 6
+Current: 2
+Distances: [0, 52, 142, inf, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4240>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 5
+Node is: 5 inf 5
+Node is: 5 inf 5
+	Children attached to root
+Megring root: 5
+Right: 6
+New right: 6
+Head: 5
+Node is: 5 inf 6
+Node is: 6 inf 5
+Node is: 5 inf 6
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A42B0>
+	 5
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4320>
+	 6
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 5
+Current: 3
+Distances: [0, 52, 142, 187, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A42B0>
+looping
+Extracting min
+	Not none
+Head: 6
+Node is: 6 inf 6
+Node is: 6 inf 6
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4320>
+	 6
+A[i]: None
+A[i]: None
+Total: 4
+Current: 4
+Distances: [0, 52, 142, 187, 287, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4320>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 7
+Node is: 7 inf 8
+Node is: 8 inf 7
+Node is: 7 inf 8
+	Children attached to root
+Megring root: 7
+Right: 6
+New right: 6
+Megring root: 8
+Right: 7
+New right: 7
+Head: 8
+Node is: 8 inf 7
+Node is: 7 inf 8
+Node is: 8 inf 7
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4390>
+	 7
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4400>
+	 8
+A[i]: None
+A[i]: None
+Total: 3
+Current: 5
+Distances: [0, 52, 142, 187, 287, 372, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4400>
+looping
+Extracting min
+	Not none
+Head: 8
+Node is: 8 inf 8
+Node is: 8 inf 8
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4400>
+	 8
+A[i]: None
+Total: 2
+Current: 6
+Distances: [0, 52, 142, 187, 287, 372, 376, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4400>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 9
+Node is: 9 inf 9
+Node is: 9 inf 9
+	Children attached to root
+Megring root: 9
+Right: 8
+New right: 8
+Head: 9
+Node is: 9 inf 9
+Node is: 9 inf 9
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4470>
+	 9
+A[i]: None
+Total: 1
+Current: 7
+Distances: [0, 52, 142, 187, 287, 372, 376, 406, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4470>
+looping
+Extracting min
+	Not none
+Total: 0
+Current: 8
+Distances: [0, 52, 142, 187, 287, 372, 376, 406, 471]
+Decreasing
+0
+1
+2
+3
+4
+5
+6
+7
+8
+Loading graph data...
+Loading Complete.
+Graph 2 out of 8 info: 
+	Directed: True
+	Vertex Count: 9
+	Edge Count: 18
+Calculating average time for shortest path...
+Dijkstra Run Time:  0.3
+Bellman-Ford Run Time:  0.7
+Value: 0
+Edges:
+	 0 1 78
+	 0 3 19
+Value: 1
+Edges:
+	 1 2 79
+	 1 4 29
+Value: 2
+Edges:
+	 2 3 70
+	 2 5 14
+Value: 3
+Edges:
+	 3 4 49
+	 3 6 54
+Value: 4
+Edges:
+	 4 5 31
+	 4 8 47
+Value: 5
+Edges:
+	 5 6 65
+	 5 2 90
+Value: 6
+Edges:
+	 6 7 95
+	 6 4 42
+Value: 7
+Edges:
+	 7 8 30
+	 7 0 76
+Value: 8
+Edges:
+	 8 0 49
+	 8 1 23
+inserting value: 1
+Megring root: 1
+root is none
+	right is: 1
+inserting value: 2
+Megring root: 2
+Right: 1
+New right: 1
+	right is: 1
+inserting value: 3
+Megring root: 3
+Right: 2
+New right: 2
+	right is: 2
+inserting value: 4
+Megring root: 4
+Right: 3
+New right: 3
+	right is: 3
+inserting value: 5
+Megring root: 5
+Right: 4
+New right: 4
+	right is: 4
+inserting value: 6
+Megring root: 6
+Right: 5
+New right: 5
+	right is: 5
+inserting value: 7
+Megring root: 7
+Right: 6
+New right: 6
+	right is: 6
+inserting value: 8
+Megring root: 8
+Right: 7
+New right: 7
+	right is: 7
+inserting value: 9
+Megring root: 9
+Right: 8
+New right: 8
+	right is: 8
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A45F8>
+Head: 1
+Node is: 1 0 2
+Node is: 9 inf 1
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 1 0 2
+[0, inf, inf, inf, inf, inf, inf, inf, inf]
+looping
+Extracting min
+	Not none
+Head: 9
+Node is: 9 inf 2
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 9 inf 2
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4668>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 8
+Current: 0
+Distances: [0, inf, inf, inf, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4978>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4668>
+Cutting: 3 1
+Megring root: 4
+Right: 2
+New right: 2
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 5
+Node is: 5 inf 5
+Node is: 5 inf 5
+	Children attached to root
+Megring root: 5
+Right: 4
+New right: 4
+Head: 2
+Node is: 2 78 5
+Node is: 5 inf 2
+Node is: 2 78 5
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A47B8>
+	 5
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4668>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 7
+Current: 3
+Distances: [0, 78, inf, 19, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4668>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A47B8>
+Cutting: 6 5
+Megring root: 7
+Right: 5
+New right: 5
+looping
+Extracting min
+	Not none
+Head: 2
+Node is: 2 78 7
+Node is: 7 73 2
+Node is: 2 78 7
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4898>
+	 7
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4668>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 6
+Current: 4
+Distances: [0, 78, inf, 19, 68, inf, 73, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4898>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4898>
+Cutting: 8 7
+Megring root: 9
+Right: 7
+New right: 7
+looping
+Extracting min
+	Not none
+Head: 2
+Node is: 2 78 9
+Node is: 9 115 2
+Node is: 2 78 9
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4978>
+	 9
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4668>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 5
+Current: 6
+Distances: [0, 78, inf, 19, 68, 99, 73, inf, 115]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4668>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 3
+Node is: 3 inf 6
+Node is: 6 99 3
+Node is: 3 inf 6
+	Children attached to root
+Megring root: 3
+Right: 9
+New right: 9
+Megring root: 6
+Right: 3
+New right: 3
+Head: 6
+Node is: 6 99 9
+Node is: 3 inf 6
+Node is: 9 115 3
+Node is: 6 99 9
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4828>
+	 6
+A[i]: None
+A[i]: None
+Total: 4
+Current: 1
+Distances: [0, 78, inf, 19, 68, 99, 73, 168, 115]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4828>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 8
+Node is: 8 168 9
+Node is: 9 115 8
+Node is: 8 168 9
+	Children attached to root
+Megring root: 8
+Right: 6
+New right: 6
+Megring root: 9
+Right: 8
+New right: 8
+Head: 9
+Node is: 9 115 8
+Node is: 8 168 9
+Node is: 9 115 8
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4908>
+	 8
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4978>
+	 9
+A[i]: None
+A[i]: None
+Total: 3
+Current: 5
+Distances: [0, 78, 157, 19, 68, 99, 73, 168, 115]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 3
+Node is: 3 157 3
+Node is: 3 157 3
+	Children attached to root
+Megring root: 3
+Right: 8
+New right: 8
+Head: 3
+Node is: 3 157 8
+Node is: 8 168 3
+Node is: 3 157 8
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A46D8>
+	 3
+A[i]: None
+Total: 2
+Current: 8
+Distances: [0, 78, 157, 19, 68, 99, 73, 168, 115]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 8
+Node is: 8 168 8
+Node is: 8 168 8
+	Children attached to root
+Megring root: 8
+Right: 3
+New right: 3
+Head: 8
+Node is: 8 168 8
+Node is: 8 168 8
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4908>
+	 8
+A[i]: None
+Total: 1
+Current: 2
+Distances: [0, 78, 157, 19, 68, 99, 73, 168, 115]
+Decreasing
+looping
+Extracting min
+	Not none
+Total: 0
+Current: 7
+Distances: [0, 78, 157, 19, 68, 99, 73, 168, 115]
+Decreasing
+0
+3
+4
+6
+1
+5
+8
+2
+7
+Loading graph data...
+Loading Complete.
+Graph 3 out of 8 info: 
+	Directed: True
+	Vertex Count: 9
+	Edge Count: 27
+Calculating average time for shortest path...
+Dijkstra Run Time:  0.2
+Bellman-Ford Run Time:  0.9
+Value: 0
+Edges:
+	 0 1 32
+	 0 5 15
+	 0 8 1
+Value: 1
+Edges:
+	 1 2 91
+	 1 0 45
+	 1 8 72
+Value: 2
+Edges:
+	 2 3 63
+	 2 6 93
+	 2 7 65
+Value: 3
+Edges:
+	 3 4 65
+	 3 1 78
+	 3 0 38
+Value: 4
+Edges:
+	 4 5 68
+	 4 8 88
+	 4 0 7
+Value: 5
+Edges:
+	 5 6 59
+	 5 2 64
+	 5 8 74
+Value: 6
+Edges:
+	 6 7 71
+	 6 4 6
+	 6 2 87
+Value: 7
+Edges:
+	 7 8 61
+	 7 4 83
+	 7 1 94
+Value: 8
+Edges:
+	 8 0 25
+	 8 5 3
+	 8 4 88
+inserting value: 1
+Megring root: 1
+root is none
+	right is: 1
+inserting value: 2
+Megring root: 2
+Right: 1
+New right: 1
+	right is: 1
+inserting value: 3
+Megring root: 3
+Right: 2
+New right: 2
+	right is: 2
+inserting value: 4
+Megring root: 4
+Right: 3
+New right: 3
+	right is: 3
+inserting value: 5
+Megring root: 5
+Right: 4
+New right: 4
+	right is: 4
+inserting value: 6
+Megring root: 6
+Right: 5
+New right: 5
+	right is: 5
+inserting value: 7
+Megring root: 7
+Right: 6
+New right: 6
+	right is: 6
+inserting value: 8
+Megring root: 8
+Right: 7
+New right: 7
+	right is: 7
+inserting value: 9
+Megring root: 9
+Right: 8
+New right: 8
+	right is: 8
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4898>
+Head: 1
+Node is: 1 0 2
+Node is: 9 inf 1
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 1 0 2
+[0, inf, inf, inf, inf, inf, inf, inf, inf]
+looping
+Extracting min
+	Not none
+Head: 9
+Node is: 9 inf 2
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 9 inf 2
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4128>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 8
+Current: 0
+Distances: [0, inf, inf, inf, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A47F0>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4128>
+Cutting: 5 1
+Megring root: 6
+Right: 2
+New right: 2
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4588>
+Cutting: 8 7
+Megring root: 9
+Right: 6
+New right: 6
+looping
+Extracting min
+	Not none
+Head: 2
+Node is: 2 32 6
+Node is: 6 15 2
+Node is: 2 32 6
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4588>
+	 6
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 7
+Current: 8
+Distances: [0, 32, inf, inf, inf, 15, inf, inf, 1]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4588>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4588>
+Cutting: 4 3
+Megring root: 5
+Right: 6
+New right: 6
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 7
+Node is: 7 inf 8
+Node is: 2 32 7
+Node is: 8 inf 2
+Node is: 7 inf 8
+	Children attached to root
+Megring root: 7
+Right: 5
+New right: 5
+Megring root: 2
+Right: 7
+New right: 7
+Megring root: 8
+Right: 2
+New right: 2
+Head: 8
+Node is: 8 inf 5
+Node is: 2 32 8
+Node is: 7 inf 2
+Node is: 5 89 7
+Node is: 8 inf 5
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4358>
+	 5
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A45C0>
+	 7
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4128>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 6
+Current: 5
+Distances: [0, 32, inf, inf, 89, 4, inf, inf, 1]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4128>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4128>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 3
+Node is: 3 68 4
+Node is: 4 inf 3
+Node is: 3 68 4
+	Children attached to root
+Megring root: 3
+Right: 7
+New right: 7
+Megring root: 4
+Right: 3
+New right: 3
+Head: 4
+Node is: 4 inf 5
+Node is: 3 68 4
+Node is: 7 63 3
+Node is: 5 89 7
+Node is: 4 inf 5
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4358>
+	 5
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A45C0>
+	 7
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 5
+Current: 1
+Distances: [0, 32, 68, inf, 89, 4, 63, inf, 1]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 8
+Node is: 8 inf 3
+Node is: 3 68 8
+Node is: 8 inf 3
+	Children attached to root
+Megring root: 8
+Right: 5
+New right: 5
+Megring root: 3
+Right: 8
+New right: 8
+Head: 3
+Node is: 3 68 5
+Node is: 8 inf 3
+Node is: 5 89 8
+Node is: 3 68 5
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4198>
+	 3
+A[i]: None
+A[i]: None
+Total: 4
+Current: 6
+Distances: [0, 32, 68, inf, 89, 4, 63, inf, 1]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4198>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4198>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 4
+Node is: 4 inf 5
+Node is: 5 69 4
+Node is: 4 inf 5
+	Children attached to root
+Megring root: 4
+Right: 3
+New right: 3
+Megring root: 5
+Right: 4
+New right: 4
+Head: 5
+Node is: 5 69 4
+Node is: 4 inf 5
+Node is: 5 69 4
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4278>
+	 4
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4358>
+	 5
+A[i]: None
+A[i]: None
+Total: 3
+Current: 2
+Distances: [0, 32, 68, inf, 69, 4, 63, 134, 1]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4358>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4358>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 8
+Node is: 8 133 8
+Node is: 8 133 8
+	Children attached to root
+Megring root: 8
+Right: 4
+New right: 4
+Head: 8
+Node is: 8 133 4
+Node is: 4 131 8
+Node is: 8 133 4
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4278>
+	 4
+A[i]: None
+Total: 2
+Current: 4
+Distances: [0, 32, 68, 131, 69, 4, 63, 133, 1]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 8
+Node is: 8 133 8
+Node is: 8 133 8
+	Children attached to root
+Megring root: 8
+Right: 4
+New right: 4
+Head: 8
+Node is: 8 133 8
+Node is: 8 133 8
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4710>
+	 8
+A[i]: None
+Total: 1
+Current: 3
+Distances: [0, 32, 68, 131, 69, 4, 63, 133, 1]
+Decreasing
+looping
+Extracting min
+	Not none
+Total: 0
+Current: 7
+Distances: [0, 32, 68, 131, 69, 4, 63, 133, 1]
+Decreasing
+0
+8
+5
+1
+6
+2
+4
+3
+7
+Loading graph data...
+Loading Complete.
+Graph 4 out of 8 info: 
+	Directed: True
+	Vertex Count: 9
+	Edge Count: 36
+Calculating average time for shortest path...
+Dijkstra Run Time:  0.3
+Bellman-Ford Run Time:  1.1
+Value: 0
+Edges:
+	 0 1 91
+	 0 4 20
+	 0 6 61
+	 0 7 32
+Value: 1
+Edges:
+	 1 2 15
+	 1 4 30
+	 1 0 66
+	 1 8 76
+Value: 2
+Edges:
+	 2 3 100
+	 2 0 76
+	 2 5 9
+	 2 8 60
+Value: 3
+Edges:
+	 3 4 82
+	 3 6 97
+	 3 7 11
+	 3 0 80
+Value: 4
+Edges:
+	 4 5 99
+	 4 3 93
+	 4 2 1
+	 4 7 24
+Value: 5
+Edges:
+	 5 6 37
+	 5 0 90
+	 5 4 10
+	 5 2 70
+Value: 6
+Edges:
+	 6 7 21
+	 6 3 73
+	 6 4 69
+	 6 1 56
+Value: 7
+Edges:
+	 7 8 5
+	 7 4 34
+	 7 6 83
+	 7 1 25
+Value: 8
+Edges:
+	 8 0 3
+	 8 2 73
+	 8 7 27
+	 8 6 49
+inserting value: 1
+Megring root: 1
+root is none
+	right is: 1
+inserting value: 2
+Megring root: 2
+Right: 1
+New right: 1
+	right is: 1
+inserting value: 3
+Megring root: 3
+Right: 2
+New right: 2
+	right is: 2
+inserting value: 4
+Megring root: 4
+Right: 3
+New right: 3
+	right is: 3
+inserting value: 5
+Megring root: 5
+Right: 4
+New right: 4
+	right is: 4
+inserting value: 6
+Megring root: 6
+Right: 5
+New right: 5
+	right is: 5
+inserting value: 7
+Megring root: 7
+Right: 6
+New right: 6
+	right is: 6
+inserting value: 8
+Megring root: 8
+Right: 7
+New right: 7
+	right is: 7
+inserting value: 9
+Megring root: 9
+Right: 8
+New right: 8
+	right is: 8
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4940>
+Head: 1
+Node is: 1 0 2
+Node is: 9 inf 1
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 1 0 2
+[0, inf, inf, inf, inf, inf, inf, inf, inf]
+looping
+Extracting min
+	Not none
+Head: 9
+Node is: 9 inf 2
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 9 inf 2
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A49E8>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 8
+Current: 0
+Distances: [0, inf, inf, inf, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4CF8>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A49E8>
+Cutting: 4 3
+Megring root: 5
+Right: 2
+New right: 2
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4B38>
+Cutting: 6 5
+Megring root: 7
+Right: 5
+New right: 5
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4B38>
+Cutting: 7 5
+Megring root: 8
+Right: 7
+New right: 7
+Cutting: 5 1
+Megring root: 6
+Right: 8
+New right: 8
+looping
+Extracting min
+	Not none
+Head: 2
+Node is: 2 91 7
+Node is: 6 inf 2
+Node is: 8 32 6
+Node is: 7 61 8
+Node is: 2 91 7
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C88>
+	 8
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 7
+Current: 4
+Distances: [0, 91, inf, inf, 20, inf, 61, 32, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C88>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C88>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C88>
+Cutting: 2 1
+Megring root: 3
+Right: 8
+New right: 8
+looping
+Extracting min
+	Not none
+Head: 8
+Node is: 8 32 8
+Node is: 8 32 8
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C88>
+	 8
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 6
+Current: 2
+Distances: [0, 91, 21, 113, 20, 119, 61, 32, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C88>
+Cutting: 5 6
+Megring root: 6
+Right: 8
+New right: 8
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4BA8>
+looping
+Extracting min
+	Not none
+Head: 8
+Node is: 8 32 8
+Node is: 8 32 8
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C88>
+	 8
+A[i]: None
+A[i]: None
+Total: 5
+Current: 5
+Distances: [0, 91, 21, 113, 20, 30, 61, 32, 81]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 9
+Node is: 9 81 7
+Node is: 2 91 9
+Node is: 7 61 2
+Node is: 9 81 7
+	Children attached to root
+Megring root: 9
+Right: 8
+New right: 8
+Megring root: 2
+Right: 9
+New right: 9
+Megring root: 7
+Right: 2
+New right: 2
+Head: 7
+Node is: 7 61 9
+Node is: 2 91 7
+Node is: 9 81 2
+Node is: 7 61 9
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C18>
+	 7
+A[i]: None
+A[i]: None
+Total: 4
+Current: 7
+Distances: [0, 91, 21, 113, 20, 30, 61, 32, 81]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C18>
+Cutting: 8 6
+Megring root: 9
+Right: 7
+New right: 7
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4CF8>
+Cutting: 1 6
+Megring root: 2
+Right: 9
+New right: 9
+looping
+Extracting min
+	Not none
+Head: 7
+Node is: 7 61 2
+Node is: 2 57 7
+Node is: 7 61 2
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C18>
+	 7
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A49E8>
+	 2
+A[i]: None
+A[i]: None
+Total: 3
+Current: 8
+Distances: [0, 57, 21, 113, 20, 30, 61, 32, 37]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 4
+Node is: 4 113 4
+Node is: 4 113 4
+	Children attached to root
+Megring root: 4
+Right: 2
+New right: 2
+Head: 7
+Node is: 7 61 4
+Node is: 4 113 7
+Node is: 7 61 4
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C18>
+	 7
+A[i]: None
+Total: 2
+Current: 1
+Distances: [0, 57, 21, 113, 20, 30, 61, 32, 37]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 4
+Node is: 4 113 4
+Node is: 4 113 4
+	Children attached to root
+Megring root: 4
+Right: 7
+New right: 7
+Head: 4
+Node is: 4 113 4
+Node is: 4 113 4
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4AC8>
+	 4
+A[i]: None
+Total: 1
+Current: 6
+Distances: [0, 57, 21, 113, 20, 30, 61, 32, 37]
+Decreasing
+looping
+Extracting min
+	Not none
+Total: 0
+Current: 3
+Distances: [0, 57, 21, 113, 20, 30, 61, 32, 37]
+Decreasing
+0
+4
+2
+5
+7
+8
+1
+6
+3
+Loading graph data...
+Loading Complete.
+Graph 5 out of 8 info: 
+	Directed: True
+	Vertex Count: 9
+	Edge Count: 45
+Calculating average time for shortest path...
+Dijkstra Run Time:  0.3
+Bellman-Ford Run Time:  1.5
+Value: 0
+Edges:
+	 0 1 30
+	 0 2 50
+	 0 4 26
+	 0 6 11
+	 0 5 62
+Value: 1
+Edges:
+	 1 2 61
+	 1 3 69
+	 1 6 53
+	 1 0 62
+	 1 4 86
+Value: 2
+Edges:
+	 2 3 25
+	 2 0 48
+	 2 8 85
+	 2 6 80
+	 2 7 12
+Value: 3
+Edges:
+	 3 4 71
+	 3 8 47
+	 3 1 91
+	 3 0 7
+	 3 7 83
+Value: 4
+Edges:
+	 4 5 67
+	 4 1 8
+	 4 6 93
+	 4 7 100
+	 4 2 54
+Value: 5
+Edges:
+	 5 6 80
+	 5 4 66
+	 5 8 97
+	 5 1 74
+	 5 3 76
+Value: 6
+Edges:
+	 6 7 86
+	 6 8 13
+	 6 4 27
+	 6 0 10
+	 6 1 82
+Value: 7
+Edges:
+	 7 8 46
+	 7 3 22
+	 7 4 39
+	 7 1 7
+	 7 0 75
+Value: 8
+Edges:
+	 8 0 16
+	 8 1 45
+	 8 6 87
+	 8 5 66
+	 8 4 86
+inserting value: 1
+Megring root: 1
+root is none
+	right is: 1
+inserting value: 2
+Megring root: 2
+Right: 1
+New right: 1
+	right is: 1
+inserting value: 3
+Megring root: 3
+Right: 2
+New right: 2
+	right is: 2
+inserting value: 4
+Megring root: 4
+Right: 3
+New right: 3
+	right is: 3
+inserting value: 5
+Megring root: 5
+Right: 4
+New right: 4
+	right is: 4
+inserting value: 6
+Megring root: 6
+Right: 5
+New right: 5
+	right is: 5
+inserting value: 7
+Megring root: 7
+Right: 6
+New right: 6
+	right is: 6
+inserting value: 8
+Megring root: 8
+Right: 7
+New right: 7
+	right is: 7
+inserting value: 9
+Megring root: 9
+Right: 8
+New right: 8
+	right is: 8
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C18>
+Head: 1
+Node is: 1 0 2
+Node is: 9 inf 1
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 1 0 2
+[0, inf, inf, inf, inf, inf, inf, inf, inf]
+looping
+Extracting min
+	Not none
+Head: 9
+Node is: 9 inf 2
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 9 inf 2
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A58>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 8
+Current: 0
+Distances: [0, inf, inf, inf, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4CC0>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A58>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A58>
+Cutting: 4 3
+Megring root: 5
+Right: 2
+New right: 2
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A48D0>
+Cutting: 6 5
+Megring root: 7
+Right: 5
+New right: 5
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4B70>
+looping
+Extracting min
+	Not none
+Head: 2
+Node is: 2 30 5
+Node is: 5 26 2
+Node is: 2 30 5
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A48D0>
+	 5
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A58>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 7
+Current: 6
+Distances: [0, 30, 50, inf, 26, 62, 11, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A48D0>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A48D0>
+Cutting: 8 7
+Megring root: 9
+Right: 5
+New right: 5
+looping
+Extracting min
+	Not none
+Head: 2
+Node is: 2 30 5
+Node is: 5 26 2
+Node is: 2 30 5
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A48D0>
+	 5
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A58>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 6
+Current: 8
+Distances: [0, 30, 50, inf, 26, 62, 11, 97, 24]
+Decreasing
+looping
+Extracting min
+	Not none
+Head: 2
+Node is: 2 30 2
+Node is: 2 30 2
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A58>
+	 2
+A[i]: None
+A[i]: None
+Total: 5
+Current: 4
+Distances: [0, 30, 50, inf, 26, 62, 11, 97, 24]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 3
+Node is: 3 50 4
+Node is: 6 62 3
+Node is: 4 inf 6
+Node is: 3 50 4
+	Children attached to root
+Megring root: 3
+Right: 2
+New right: 2
+Megring root: 6
+Right: 3
+New right: 3
+Megring root: 4
+Right: 6
+New right: 6
+Head: 4
+Node is: 4 inf 3
+Node is: 6 62 4
+Node is: 3 50 6
+Node is: 4 inf 3
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4B38>
+	 3
+A[i]: None
+A[i]: None
+Total: 4
+Current: 1
+Distances: [0, 30, 50, inf, 26, 62, 11, 97, 24]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4B38>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 4
+Node is: 4 99 6
+Node is: 6 62 4
+Node is: 4 99 6
+	Children attached to root
+Megring root: 4
+Right: 3
+New right: 3
+Megring root: 6
+Right: 4
+New right: 4
+Head: 6
+Node is: 6 62 4
+Node is: 4 99 6
+Node is: 6 62 4
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A40B8>
+	 4
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A90>
+	 6
+A[i]: None
+A[i]: None
+Total: 3
+Current: 2
+Distances: [0, 30, 50, 99, 26, 62, 11, 97, 24]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A90>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A90>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 8
+Node is: 8 62 8
+Node is: 8 62 8
+	Children attached to root
+Megring root: 8
+Right: 4
+New right: 4
+Head: 8
+Node is: 8 62 4
+Node is: 4 75 8
+Node is: 8 62 4
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4C50>
+	 8
+A[i]: None
+Total: 2
+Current: 5
+Distances: [0, 30, 50, 75, 26, 62, 11, 62, 24]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 4
+Node is: 4 75 4
+Node is: 4 75 4
+	Children attached to root
+Megring root: 4
+Right: 8
+New right: 8
+Head: 4
+Node is: 4 75 4
+Node is: 4 75 4
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A40B8>
+	 4
+A[i]: None
+Total: 1
+Current: 7
+Distances: [0, 30, 50, 75, 26, 62, 11, 62, 24]
+Decreasing
+looping
+Extracting min
+	Not none
+Total: 0
+Current: 3
+Distances: [0, 30, 50, 75, 26, 62, 11, 62, 24]
+Decreasing
+0
+6
+8
+4
+1
+2
+5
+7
+3
+Loading graph data...
+Loading Complete.
+Graph 6 out of 8 info: 
+	Directed: True
+	Vertex Count: 9
+	Edge Count: 54
+Calculating average time for shortest path...
+Dijkstra Run Time:  0.4
+Bellman-Ford Run Time:  1.7
+Value: 0
+Edges:
+	 0 1 35
+	 0 5 39
+	 0 8 67
+	 0 4 94
+	 0 2 40
+	 0 7 53
+Value: 1
+Edges:
+	 1 2 79
+	 1 3 63
+	 1 7 18
+	 1 4 30
+	 1 0 49
+	 1 5 20
+Value: 2
+Edges:
+	 2 3 30
+	 2 1 17
+	 2 0 10
+	 2 8 83
+	 2 6 58
+	 2 4 43
+Value: 3
+Edges:
+	 3 4 70
+	 3 2 73
+	 3 8 88
+	 3 6 21
+	 3 0 60
+	 3 5 7
+Value: 4
+Edges:
+	 4 5 63
+	 4 6 14
+	 4 0 55
+	 4 7 47
+	 4 1 100
+	 4 8 16
+Value: 5
+Edges:
+	 5 6 59
+	 5 1 73
+	 5 0 89
+	 5 2 96
+	 5 8 29
+	 5 7 100
+Value: 6
+Edges:
+	 6 7 69
+	 6 4 70
+	 6 1 75
+	 6 8 96
+	 6 3 19
+	 6 5 30
+Value: 7
+Edges:
+	 7 8 63
+	 7 6 82
+	 7 5 63
+	 7 4 6
+	 7 1 98
+	 7 2 41
+Value: 8
+Edges:
+	 8 0 80
+	 8 3 78
+	 8 1 39
+	 8 4 54
+	 8 7 43
+	 8 5 18
+inserting value: 1
+Megring root: 1
+root is none
+	right is: 1
+inserting value: 2
+Megring root: 2
+Right: 1
+New right: 1
+	right is: 1
+inserting value: 3
+Megring root: 3
+Right: 2
+New right: 2
+	right is: 2
+inserting value: 4
+Megring root: 4
+Right: 3
+New right: 3
+	right is: 3
+inserting value: 5
+Megring root: 5
+Right: 4
+New right: 4
+	right is: 4
+inserting value: 6
+Megring root: 6
+Right: 5
+New right: 5
+	right is: 5
+inserting value: 7
+Megring root: 7
+Right: 6
+New right: 6
+	right is: 6
+inserting value: 8
+Megring root: 8
+Right: 7
+New right: 7
+	right is: 7
+inserting value: 9
+Megring root: 9
+Right: 8
+New right: 8
+	right is: 8
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4EB8>
+Head: 1
+Node is: 1 0 2
+Node is: 9 inf 1
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 1 0 2
+[0, inf, inf, inf, inf, inf, inf, inf, inf]
+looping
+Extracting min
+	Not none
+Head: 9
+Node is: 9 inf 2
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 9 inf 2
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4F28>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 8
+Current: 0
+Distances: [0, inf, inf, inf, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E69AF28>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4F28>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4F28>
+Cutting: 8 7
+Megring root: 9
+Right: 2
+New right: 2
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4F28>
+Cutting: 4 3
+Megring root: 5
+Right: 9
+New right: 9
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4F28>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4F28>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 3
+Node is: 3 40 4
+Node is: 6 39 3
+Node is: 4 inf 6
+Node is: 3 40 4
+	Children attached to root
+Megring root: 3
+Right: 5
+New right: 5
+Megring root: 6
+Right: 3
+New right: 3
+Megring root: 4
+Right: 6
+New right: 6
+Head: 4
+Node is: 4 inf 9
+Node is: 6 39 4
+Node is: 3 40 6
+Node is: 5 94 3
+Node is: 9 67 5
+Node is: 4 inf 9
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+	 6
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 7
+Current: 1
+Distances: [0, 35, 40, inf, 94, 39, inf, 53, 67]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+Cutting: 4 8
+Megring root: 5
+Right: 6
+New right: 6
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 7
+Node is: 7 inf 8
+Node is: 3 40 7
+Node is: 8 53 3
+Node is: 7 inf 8
+	Children attached to root
+Megring root: 7
+Right: 5
+New right: 5
+Megring root: 3
+Right: 7
+New right: 7
+Megring root: 8
+Right: 3
+New right: 3
+Head: 8
+Node is: 8 53 5
+Node is: 3 40 8
+Node is: 7 inf 3
+Node is: 5 65 7
+Node is: 8 53 5
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C40B8>
+	 5
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E5B87B8>
+	 8
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4F98>
+	 3
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 6
+Current: 5
+Distances: [0, 35, 40, 98, 65, 39, inf, 53, 67]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4F98>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 4
+Node is: 4 98 9
+Node is: 9 67 4
+Node is: 4 98 9
+	Children attached to root
+Megring root: 4
+Right: 3
+New right: 3
+Megring root: 9
+Right: 4
+New right: 4
+Head: 8
+Node is: 8 53 5
+Node is: 9 67 8
+Node is: 4 98 9
+Node is: 5 65 4
+Node is: 8 53 5
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C40B8>
+	 5
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E5B87B8>
+	 8
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 5
+Current: 2
+Distances: [0, 35, 40, 98, 65, 39, 98, 53, 67]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E5B87B8>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 7
+Node is: 7 98 9
+Node is: 9 67 7
+Node is: 7 98 9
+	Children attached to root
+Megring root: 7
+Right: 5
+New right: 5
+Megring root: 9
+Right: 7
+New right: 7
+Head: 9
+Node is: 9 67 5
+Node is: 7 98 9
+Node is: 5 65 7
+Node is: 9 67 5
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C40B8>
+	 5
+A[i]: None
+A[i]: None
+Total: 4
+Current: 7
+Distances: [0, 35, 40, 70, 65, 39, 98, 53, 67]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C40B8>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 7
+Node is: 7 98 9
+Node is: 9 67 7
+Node is: 7 98 9
+	Children attached to root
+Megring root: 7
+Right: 5
+New right: 5
+Megring root: 9
+Right: 7
+New right: 7
+Head: 9
+Node is: 9 67 7
+Node is: 7 98 9
+Node is: 9 67 7
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4198>
+	 7
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E69AF28>
+	 9
+A[i]: None
+A[i]: None
+Total: 3
+Current: 4
+Distances: [0, 35, 40, 70, 59, 39, 98, 53, 67]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E69AF28>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 4
+Node is: 4 70 4
+Node is: 4 70 4
+	Children attached to root
+Megring root: 4
+Right: 7
+New right: 7
+Head: 4
+Node is: 4 70 7
+Node is: 7 73 4
+Node is: 4 70 7
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4FD0>
+	 4
+A[i]: None
+Total: 2
+Current: 8
+Distances: [0, 35, 40, 70, 59, 39, 73, 53, 67]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 7
+Node is: 7 73 7
+Node is: 7 73 7
+	Children attached to root
+Megring root: 7
+Right: 4
+New right: 4
+Head: 7
+Node is: 7 73 7
+Node is: 7 73 7
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4198>
+	 7
+A[i]: None
+Total: 1
+Current: 3
+Distances: [0, 35, 40, 70, 59, 39, 73, 53, 67]
+Decreasing
+looping
+Extracting min
+	Not none
+Total: 0
+Current: 6
+Distances: [0, 35, 40, 70, 59, 39, 73, 53, 67]
+Decreasing
+0
+1
+5
+2
+7
+4
+8
+3
+6
+Loading graph data...
+Loading Complete.
+Graph 7 out of 8 info: 
+	Directed: True
+	Vertex Count: 9
+	Edge Count: 63
+Calculating average time for shortest path...
+Dijkstra Run Time:  0.4
+Bellman-Ford Run Time:  2.0
+Value: 0
+Edges:
+	 0 1 17
+	 0 7 100
+	 0 4 86
+	 0 2 31
+	 0 5 44
+	 0 6 37
+	 0 8 79
+Value: 1
+Edges:
+	 1 2 82
+	 1 4 70
+	 1 8 24
+	 1 3 80
+	 1 7 65
+	 1 6 52
+	 1 0 25
+Value: 2
+Edges:
+	 2 3 1
+	 2 0 68
+	 2 8 69
+	 2 4 89
+	 2 6 98
+	 2 5 17
+	 2 1 23
+Value: 3
+Edges:
+	 3 4 37
+	 3 7 75
+	 3 8 43
+	 3 2 23
+	 3 0 34
+	 3 6 81
+	 3 5 21
+Value: 4
+Edges:
+	 4 5 5
+	 4 8 96
+	 4 0 65
+	 4 3 75
+	 4 6 56
+	 4 1 33
+	 4 7 76
+Value: 5
+Edges:
+	 5 6 92
+	 5 3 81
+	 5 7 25
+	 5 2 7
+	 5 0 24
+	 5 1 75
+	 5 8 86
+Value: 6
+Edges:
+	 6 7 82
+	 6 0 11
+	 6 3 60
+	 6 1 5
+	 6 4 99
+	 6 8 8
+	 6 5 79
+Value: 7
+Edges:
+	 7 8 55
+	 7 0 48
+	 7 1 39
+	 7 5 31
+	 7 2 58
+	 7 3 1
+	 7 6 81
+Value: 8
+Edges:
+	 8 0 62
+	 8 3 5
+	 8 2 99
+	 8 7 83
+	 8 5 71
+	 8 4 86
+	 8 1 37
+inserting value: 1
+Megring root: 1
+root is none
+	right is: 1
+inserting value: 2
+Megring root: 2
+Right: 1
+New right: 1
+	right is: 1
+inserting value: 3
+Megring root: 3
+Right: 2
+New right: 2
+	right is: 2
+inserting value: 4
+Megring root: 4
+Right: 3
+New right: 3
+	right is: 3
+inserting value: 5
+Megring root: 5
+Right: 4
+New right: 4
+	right is: 4
+inserting value: 6
+Megring root: 6
+Right: 5
+New right: 5
+	right is: 5
+inserting value: 7
+Megring root: 7
+Right: 6
+New right: 6
+	right is: 6
+inserting value: 8
+Megring root: 8
+Right: 7
+New right: 7
+	right is: 7
+inserting value: 9
+Megring root: 9
+Right: 8
+New right: 8
+	right is: 8
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4BA8>
+Head: 1
+Node is: 1 0 2
+Node is: 9 inf 1
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 1 0 2
+[0, inf, inf, inf, inf, inf, inf, inf, inf]
+looping
+Extracting min
+	Not none
+Head: 9
+Node is: 9 inf 2
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 9 inf 2
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A20>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 8
+Current: 0
+Distances: [0, inf, inf, inf, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C41D0>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A20>
+Cutting: 7 5
+Megring root: 8
+Right: 2
+New right: 2
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A20>
+Cutting: 4 3
+Megring root: 5
+Right: 8
+New right: 8
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A20>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A20>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A20>
+Cutting: 6 5
+Megring root: 7
+Right: 5
+New right: 5
+Cutting: 5 1
+Megring root: 6
+Right: 7
+New right: 7
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4A20>
+Cutting: 8 7
+Megring root: 9
+Right: 6
+New right: 6
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 3
+Node is: 3 31 4
+Node is: 4 inf 3
+Node is: 3 31 4
+	Children attached to root
+Megring root: 3
+Right: 9
+New right: 9
+Megring root: 4
+Right: 3
+New right: 3
+Head: 4
+Node is: 4 inf 8
+Node is: 3 31 4
+Node is: 9 79 3
+Node is: 6 44 9
+Node is: 7 37 6
+Node is: 5 86 7
+Node is: 8 100 5
+Node is: 4 inf 8
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4160>
+	 8
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4080>
+	 7
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4BE0>
+	 3
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 7
+Current: 1
+Distances: [0, 17, 31, inf, 86, 44, 37, 100, 79]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4BE0>
+Cutting: 8 5
+Megring root: 9
+Right: 7
+New right: 7
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4BE0>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4BE0>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 4
+Node is: 4 97 6
+Node is: 6 44 4
+Node is: 4 97 6
+	Children attached to root
+Megring root: 4
+Right: 9
+New right: 9
+Megring root: 6
+Right: 4
+New right: 4
+Head: 6
+Node is: 6 44 8
+Node is: 4 97 6
+Node is: 9 41 4
+Node is: 7 37 9
+Node is: 8 82 7
+Node is: 6 44 8
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C41D0>
+	 9
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4080>
+	 7
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 6
+Current: 2
+Distances: [0, 17, 31, 97, 86, 44, 37, 82, 41]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4080>
+Cutting: 3 5
+Megring root: 4
+Right: 7
+New right: 7
+looping
+Extracting min
+	Not none
+Head: 9
+Node is: 9 41 7
+Node is: 7 37 9
+Node is: 9 41 7
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C41D0>
+	 9
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4080>
+	 7
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 5
+Current: 3
+Distances: [0, 17, 31, 32, 86, 44, 37, 82, 41]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4080>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 5
+Node is: 5 69 6
+Node is: 6 44 5
+Node is: 5 69 6
+	Children attached to root
+Megring root: 5
+Right: 7
+New right: 7
+Megring root: 6
+Right: 5
+New right: 5
+Head: 9
+Node is: 9 41 5
+Node is: 6 44 9
+Node is: 5 69 6
+Node is: 9 41 5
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C41D0>
+	 9
+A[i]: None
+A[i]: None
+Total: 4
+Current: 6
+Distances: [0, 17, 31, 32, 69, 44, 37, 82, 41]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 8
+Node is: 8 82 6
+Node is: 6 44 8
+Node is: 8 82 6
+	Children attached to root
+Megring root: 8
+Right: 9
+New right: 9
+Megring root: 6
+Right: 8
+New right: 8
+Head: 6
+Node is: 6 44 8
+Node is: 8 82 6
+Node is: 6 44 8
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4160>
+	 8
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+	 6
+A[i]: None
+A[i]: None
+Total: 3
+Current: 8
+Distances: [0, 17, 31, 32, 69, 44, 37, 82, 41]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 5
+Node is: 5 69 5
+Node is: 5 69 5
+	Children attached to root
+Megring root: 5
+Right: 8
+New right: 8
+Head: 5
+Node is: 5 69 8
+Node is: 8 82 5
+Node is: 5 69 8
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4F60>
+	 5
+A[i]: None
+Total: 2
+Current: 5
+Distances: [0, 17, 31, 32, 69, 44, 37, 82, 41]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4F60>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 8
+Node is: 8 69 8
+Node is: 8 69 8
+	Children attached to root
+Megring root: 8
+Right: 5
+New right: 5
+Head: 8
+Node is: 8 69 8
+Node is: 8 69 8
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4160>
+	 8
+A[i]: None
+Total: 1
+Current: 4
+Distances: [0, 17, 31, 32, 69, 44, 37, 69, 41]
+Decreasing
+looping
+Extracting min
+	Not none
+Total: 0
+Current: 7
+Distances: [0, 17, 31, 32, 69, 44, 37, 69, 41]
+Decreasing
+0
+1
+2
+3
+6
+8
+5
+4
+7
+Loading graph data...
+Loading Complete.
+Graph 8 out of 8 info: 
+	Directed: True
+	Vertex Count: 9
+	Edge Count: 72
+Calculating average time for shortest path...
+Dijkstra Run Time:  0.5
+Bellman-Ford Run Time:  2.2
+Value: 0
+Edges:
+	 0 1 36
+	 0 6 52
+	 0 3 37
+	 0 4 29
+	 0 8 89
+	 0 5 58
+	 0 7 86
+	 0 2 6
+Value: 1
+Edges:
+	 1 2 16
+	 1 5 32
+	 1 8 19
+	 1 7 58
+	 1 0 69
+	 1 4 42
+	 1 3 99
+	 1 6 64
+Value: 2
+Edges:
+	 2 3 45
+	 2 8 98
+	 2 4 13
+	 2 7 88
+	 2 5 33
+	 2 1 90
+	 2 0 100
+	 2 6 72
+Value: 3
+Edges:
+	 3 4 79
+	 3 1 1
+	 3 5 72
+	 3 6 65
+	 3 7 72
+	 3 2 51
+	 3 0 13
+	 3 8 94
+Value: 4
+Edges:
+	 4 5 82
+	 4 0 48
+	 4 2 72
+	 4 8 31
+	 4 7 20
+	 4 6 61
+	 4 1 68
+	 4 3 26
+Value: 5
+Edges:
+	 5 6 1
+	 5 0 57
+	 5 7 22
+	 5 8 1
+	 5 4 54
+	 5 2 72
+	 5 3 83
+	 5 1 14
+Value: 6
+Edges:
+	 6 7 26
+	 6 3 30
+	 6 0 9
+	 6 1 37
+	 6 4 53
+	 6 8 76
+	 6 5 97
+	 6 2 4
+Value: 7
+Edges:
+	 7 8 14
+	 7 2 13
+	 7 5 68
+	 7 6 21
+	 7 1 52
+	 7 0 24
+	 7 4 93
+	 7 3 16
+Value: 8
+Edges:
+	 8 0 72
+	 8 5 26
+	 8 1 53
+	 8 3 69
+	 8 4 5
+	 8 2 7
+	 8 7 11
+	 8 6 37
+inserting value: 1
+Megring root: 1
+root is none
+	right is: 1
+inserting value: 2
+Megring root: 2
+Right: 1
+New right: 1
+	right is: 1
+inserting value: 3
+Megring root: 3
+Right: 2
+New right: 2
+	right is: 2
+inserting value: 4
+Megring root: 4
+Right: 3
+New right: 3
+	right is: 3
+inserting value: 5
+Megring root: 5
+Right: 4
+New right: 4
+	right is: 4
+inserting value: 6
+Megring root: 6
+Right: 5
+New right: 5
+	right is: 5
+inserting value: 7
+Megring root: 7
+Right: 6
+New right: 6
+	right is: 6
+inserting value: 8
+Megring root: 8
+Right: 7
+New right: 7
+	right is: 7
+inserting value: 9
+Megring root: 9
+Right: 8
+New right: 8
+	right is: 8
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6A4E80>
+Head: 1
+Node is: 1 0 2
+Node is: 9 inf 1
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 1 0 2
+[0, inf, inf, inf, inf, inf, inf, inf, inf]
+looping
+Extracting min
+	Not none
+Head: 9
+Node is: 9 inf 2
+Node is: 8 inf 9
+Node is: 7 inf 8
+Node is: 6 inf 7
+Node is: 5 inf 6
+Node is: 4 inf 5
+Node is: 3 inf 4
+Node is: 2 inf 3
+Node is: 9 inf 2
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 8
+Current: 0
+Distances: [0, inf, inf, inf, inf, inf, inf, inf, inf]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4400>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+Cutting: 6 5
+Megring root: 7
+Right: 2
+New right: 2
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+Cutting: 4 3
+Megring root: 5
+Right: 7
+New right: 7
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4240>
+Cutting: 8 7
+Megring root: 9
+Right: 5
+New right: 5
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4240>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4240>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4240>
+Cutting: 2 1
+Megring root: 3
+Right: 9
+New right: 9
+looping
+Extracting min
+	Not none
+Head: 2
+Node is: 2 36 7
+Node is: 9 89 2
+Node is: 5 29 9
+Node is: 7 52 5
+Node is: 2 36 7
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4320>
+	 7
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4240>
+	 5
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 7
+Current: 2
+Distances: [0, 36, 6, 37, 29, 58, 52, 86, 89]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4240>
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4240>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 9
+Node is: 9 89 9
+Node is: 9 89 9
+	Children attached to root
+Megring root: 9
+Right: 5
+New right: 5
+Head: 2
+Node is: 2 36 7
+Node is: 9 89 2
+Node is: 7 52 9
+Node is: 2 36 7
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4320>
+	 7
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+	 2
+A[i]: None
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 6
+Current: 4
+Distances: [0, 36, 6, 37, 19, 39, 52, 86, 89]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+Cutting: 8 6
+Megring root: 9
+Right: 7
+New right: 7
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4128>
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 6
+Node is: 6 39 4
+Node is: 4 37 6
+Node is: 6 39 4
+	Children attached to root
+Megring root: 6
+Right: 9
+New right: 9
+Megring root: 4
+Right: 6
+New right: 6
+Head: 4
+Node is: 4 37 7
+Node is: 6 39 4
+Node is: 9 50 6
+Node is: 7 52 9
+Node is: 4 37 7
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4320>
+	 7
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C40F0>
+	 4
+A[i]: None
+A[i]: None
+A[i]: None
+Total: 5
+Current: 1
+Distances: [0, 36, 6, 37, 19, 39, 52, 39, 50]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 9
+Node is: 9 50 6
+Node is: 6 39 9
+Node is: 9 50 6
+	Children attached to root
+Megring root: 9
+Right: 7
+New right: 7
+Megring root: 6
+Right: 9
+New right: 9
+Head: 6
+Node is: 6 39 7
+Node is: 9 50 6
+Node is: 7 52 9
+Node is: 6 39 7
+Finding new min
+A[i]: None
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C42B0>
+	 6
+A[i]: None
+A[i]: None
+Total: 4
+Current: 3
+Distances: [0, 36, 6, 37, 19, 39, 52, 39, 50]
+Decreasing
+looping
+Extracting min
+	Not none
+	Child not none
+Head: 8
+Node is: 8 39 9
+Node is: 9 50 8
+Node is: 8 39 9
+	Children attached to root
+Megring root: 8
+Right: 6
+New right: 6
+Megring root: 9
+Right: 8
+New right: 8
+Head: 9
+Node is: 9 50 8
+Node is: 8 39 9
+Node is: 9 50 8
+Finding new min
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4390>
+	 8
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4400>
+	 9
+A[i]: None
+A[i]: None
+Total: 3
+Current: 5
+Distances: [0, 36, 6, 37, 19, 39, 52, 39, 50]
+Decreasing
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4390>
+Cutting: 6 8
+Megring root: 7
+Right: 8
+New right: 8
+Min node: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4390>
+looping
+Extracting min
+	Not none
+Head: 9
+Node is: 9 40 7
+Node is: 7 40 9
+Node is: 9 40 7
+Finding new min
+A[i]: None
+A[i]: <fibheap.FibonacciHeap.Node object at 0x000002B16E6C4320>
+	 7
+A[i]: None
+Total: 2
+Current: 7
+Distances: [0, 36, 6, 37, 19, 39, 40, 39, 40]
+Decreasing
+looping
+Extracting min
+	Not none
+Total: 1
+Current: 8
+Distances: [0, 36, 6, 37, 19, 39, 40, 39, 40]
+Decreasing
+looping
+Extracting min

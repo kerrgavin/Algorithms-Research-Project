@@ -32,13 +32,14 @@ def bellmanFord(G, s):
     return True
 
 def dijkstra(G, s):
+    # print(G.adj)
     initSingleSource(G, s)
     S = []
     Q = G.V[:]
     while len(Q) != 0:
         u = extractMin(Q)
         S.append(u)
-        for e in G.adj[u]:
+        for e in G.getAdj(u):
             relax(e.u, e.v, e.weight)
     return S
 
@@ -48,14 +49,14 @@ def Yen(G, s):
     D = []
     while C != []:
         for u in G.V:
-            edges = G.adj[u]
+            edges = G.getAdj(u)
             if u in C or D != []:
                 for uv in edges:
                     D.append(uv)
                     relax(uv.u, uv.v, uv.weight)
         for i in range(len(G.V)-1,0,-1):
             u = G.V[i]
-            edges = G.adj[u]
+            edges = G.getAdj(u)
             if u in C or D != []:
                 for uv in edges:
                     D.append(uv)
@@ -95,30 +96,31 @@ def fibRelax(u, v, w, heap, h):
 
 def fibDijkstra(G, s):
     n = len(G.V)    #intentionally 1 more than the number of vertices, keep the 0th entry free for convenience
-    visited = [False]*n
+    visited = [False]*(n)
     distance = [math.inf]*n
 
-    heapNodes = [None]*n
+    heapNodes = [None]*(n+1)
     heap = FibonacciHeap()
-    for i in range(1, n):
+    for i in range(1, n+1):
         heapNodes[i] = heap.insert(math.inf, i)     # distance, label
-        print([x.key.value for x in heap.iterate(heap.root_list)])
+
     distance[s.value] = 0
     heap.decrease_key(heapNodes[s.value + 1], 0)
-    print([x.key.value for x in heap.iterate(heap.root_list)])
+    print([x.key for x in heap.iterate(heap.root_list)])
     S = []
     while heap.total_nodes:
-        current = heap.extract_min().key
-        print([x.key.value for x in heap.iterate(heap.root_list)])
-        visited[current.value] = True
+        current = heap.extract_min().value - 1
+
+        visited[current] = True
         S.append(current)
         for e in G.adj[current]:
-            neighbor = e.v
+            neighbor = e.v.value
             cost = e.weight
-            if not visited[neighbor.value]:
-                if distance[current.value] + cost < distance[neighbor.value]:
-                    distance[neighbor.value] = distance[current.value] + cost
-                    heap.decrease_key(heapNodes[neighbor.value], distance[neighbor.value])
+            if not visited[neighbor]:
+                if distance[current] + cost < distance[neighbor]:
+                    distance[neighbor] = distance[current] + cost
+                    heap.decrease_key(heapNodes[neighbor + 1], distance[neighbor])
+        # print([x.value for x in heap.iterate(heap.root_list)])
 
 
     return S

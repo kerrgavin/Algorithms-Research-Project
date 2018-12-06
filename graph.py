@@ -6,19 +6,22 @@ class Graph(object):
         self.directed = directed
         self.adj = {}
 
+    def getAdj(self, v):
+        return self.adj[v.value]
+
     def addVertex(self,value):
         u = Vertex(value=value)
         self.V.append(u)
-        self.adj[u] = []
+        self.adj[u.value] = []
 
     def addEdge(self,u,v,weight):
         e = Edge(u,v,weight)
-        self.adj[u].append(e)
+        self.adj[u.value].append(e)
         self.E.append(e)
         if not self.directed:
             f = Edge(v, u, weight)
             if v not in self.adj:
-                self.adj[v].append(f)
+                self.adj[v.value].append(f)
 
 class Vertex(object):
     """docstring for Vertex."""
