@@ -43,56 +43,41 @@ def dijkstra(G, s):
             relax(e.u, e.v, e.weight)
     return S
 
-def Yen(G, s):
-    initSingleSource(G,s) #number vertices arbitrarily from s
-    C = [s]
-    D = []
-    while C != []:
-        for u in G.V:
-            edges = G.getAdj(u)
-            if u in C or D != []:
-                for uv in edges:
-                    D.append(uv)
-                    relax(uv.u, uv.v, uv.weight)
-        for i in range(len(G.V)-1,0,-1):
-            u = G.V[i]
-            edges = G.getAdj(u)
-            if u in C or D != []:
-                for uv in edges:
-                    D.append(uv)
-                    relax(uv.u, uv.v, uv.weight)
-        C = []
-        for k in D:
-            C.append(k.u)
-            C.append(k.v)
-        D = []
-
-# def fibDijkstra(G, s):
-#     initSingleSource(G, s)
-#     S = []
-#     Q = FibonacciHeap()
-#     for v in G.V:
-#         Q.insert(v)
-#         print(Q.find_min().key.d)
-#     print([x.key.value for x in Q.iterate(Q.root_list)])
-#
-#     while Q.total_nodes != 0:
-#
-#         u = Q.extract_min()
-#
-#         if u is not None:
-#             for e in G.adj[u.key]:
-#                 print("Connections: ", str(e.v.value))
-#             S.append(u.key)
-#             for e in G.adj[u.key]:
-#                 relax(e.u, e.v, e.weight)
-#     return S
-
-def fibRelax(u, v, w, heap, h):
+def yenRelax(u, v, w, D):
     if v.d > u.d + w:
         v.d = u.d + w
         v.pre = u
-        heap.decrease_key(h,w)
+        D[v.value] = True
+
+def Yen(G, s):
+    initSingleSource(G,s) #number vertices arbitrarily from s
+    C = [s]
+    D = [False] * len(G.V)
+    print("D", len(D))
+    while C != []:
+        for v in C:
+            print(v.value)
+        for u in G.V:
+            edges = G.getAdj(u)
+            if u in C or D[u.value]:
+                for uv in edges:
+                    yenRelax(uv.u, uv.v, uv.weight, D)
+        for i in range((len(G.V)-1),-1,-1):
+            u = G.V[i]
+            edges = G.getAdj(u)
+            if u in C or D[u.value]:
+                for uv in edges:
+                    yenRelax(uv.u, uv.v, uv.weight, D)
+        C = []
+        print("D len", len(D))
+        for i in range(0, len(D)-1):
+            print(i)
+            if D[i]:
+                print("To C",i)
+                C.append(G.V[i])
+        D = []
+        D = [False] * len(G.V)
+
 
 def fibDijkstra(G, s):
     n = len(G.V)    #intentionally 1 more than the number of vertices, keep the 0th entry free for convenience
@@ -106,7 +91,7 @@ def fibDijkstra(G, s):
 
     distance[s.value] = 0
     heap.decrease_key(heapNodes[s.value + 1], 0)
-    print([x.key for x in heap.iterate(heap.root_list)])
+
     S = []
     while heap.total_nodes:
         current = heap.extract_min().value - 1
@@ -120,33 +105,4 @@ def fibDijkstra(G, s):
                 if distance[current] + cost < distance[neighbor]:
                     distance[neighbor] = distance[current] + cost
                     heap.decrease_key(heapNodes[neighbor + 1], distance[neighbor])
-        # print([x.value for x in heap.iterate(heap.root_list)])
-
-
     return S
-
-# def fibDijkstra(G, s):
-#     n = len(G.V)    #intentionally 1 more than the number of vertices, keep the 0th entry free for convenience
-#     visited = [False]*n
-#     initSingleSource(G, s)
-#     S = []
-#     heapNodes = []
-#     heap = FibonacciHeap()
-#     heapNodes.append(None)
-#     for i in G.V:
-#         print(i.value)
-#         heapNodes.append(heap.insert(i))
-#         print([x.key.value for x in heap.iterate(heap.root_list)])     # distance, label
-#         print("heap: ", heapNodes)
-#     heap.decrease_key(heapNodes[1], 0)
-#
-#     while heap.total_nodes:
-#         current = heap.extract_min().key
-#         if current is not None:
-#             print([x.key.value for x in heap.iterate(heap.root_list)])
-#             visited[current.value] = True
-#             S.append(current)
-#             for e in G.adj[current]:
-#                 if not visited[e.v.value]:
-#                     fibRelax(e.u, e.v, e.weight, heap, heapNodes[e.v.value+1])
-#     return S

@@ -54,11 +54,9 @@ class FibonacciHeap:
 
     # insert new node into the unordered root list in O(1) time
     def insert(self, key, value=None):
-        print("inserting value:", value)
         n = self.Node(key, value)
         n.left = n.right = n
         self.merge_with_root_list(n)
-        print("\tright is:", n.right.value)
         if self.min_node is None or n.key <= self.min_node.key:
             self.min_node = n
         self.total_nodes += 1
@@ -66,7 +64,6 @@ class FibonacciHeap:
 
     # modify the key of some node in the heap in O(1) time
     def decrease_key(self, x, k):
-        print("Min node:",self.min_node)
         if k > x.key:
             return None
         x.key = k
@@ -99,7 +96,6 @@ class FibonacciHeap:
     # if a child node becomes smaller than its parent node we
     # cut this child node off and bring it up to the root list
     def cut(self, x, y):
-        print("Cutting:", x.value-1, y.value-1)
         self.remove_from_child_list(y, x)
         y.degree -= 1
         self.merge_with_root_list(x)
@@ -136,11 +132,8 @@ class FibonacciHeap:
         # find new min node - no need to reconstruct new root list below
         # because root list was iteratively changing as we were moving
         # nodes around in the above loop
-        print("Finding new min")
         for i in range(0, len(A)):
-            print("A[i]:",A[i])
             if A[i] is not None:
-                print("\t",A[i].value)
                 if A[i].key <= self.min_node.key:
                     self.min_node = A[i]
 
@@ -156,14 +149,10 @@ class FibonacciHeap:
 
     # merge a node with the doubly linked root list
     def merge_with_root_list(self, node):
-        print("Megring root:", node.value)
         if self.root_list is None:
-            print("root is none")
             self.root_list = node
         else:
-            print("Right:", self.root_list.right.value)
             node.right = self.root_list.right
-            print("New right:", node.right.value)
             node.left = self.root_list
             self.root_list.right.left = node
             self.root_list.right = node

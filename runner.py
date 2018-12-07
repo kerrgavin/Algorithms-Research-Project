@@ -47,6 +47,16 @@ def getTimeYen(G):
     avg = avg / 10
     return avg
 
+def getTimeFib(G):
+    avg = 0
+    for i in range(0,10):
+        start = round(time.clock() * 10000)
+        variants.fibDijkstra(G, G.V[0])
+        end = round(time.clock() * 10000)
+        avg += (end-start)
+    avg = avg / 10
+    return avg
+
 def getTimeBellmanFord(G):
     avg = 0
     for i in range(0,10):
@@ -58,7 +68,7 @@ def getTimeBellmanFord(G):
     return avg
 
 def main():
-    data = {"vertices":0, "dijkstra": [], "bellmanford": [], "edges": []}
+    data = {"vertices":0, "dijkstra": [], "bellmanford": [], "fibonacciheap": [], "yen": [], "edges": []}
     args = parse()
 
     print("Beginning to calculate run times...")
@@ -82,12 +92,18 @@ def main():
                 data["dijkstra"].append(avg)
                 print("Dijkstra Run Time: ", data["dijkstra"][-1])
 
+                avg = getTimeFib(G)
+                data["fibonacciheap"].append(avg)
+                print("Fibonacci Heap Run Time: ", data["fibonacciheap"][-1])
+
                 avg = getTimeBellmanFord(G)
                 data["bellmanford"].append(avg)
                 print("Bellman-Ford Run Time: ", data["bellmanford"][-1])
 
-                for s in variants.fibDijkstra(G, G.V[0]):
-                    print(s)
+                avg = getTimeYen(G)
+                data["yen"].append(avg)
+                print("Yen Run Time: ", data["yen"][-1])
+
                 G = None
                 index+=1
             except EOFError:
