@@ -61,7 +61,7 @@ def parse():
 
 def main():
     args = parse()
-    os.remove(PATH + str(args.f))
+    # os.remove(PATH + str(args.f))
     print("Generating data set " +  args.f + "...")
     for i in range(1, args.v):
         print("Generating graph with edge cap " + str(i) + "...")

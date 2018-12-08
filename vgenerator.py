@@ -5,6 +5,7 @@ except:
     import pickle
 import random
 import argparse
+import os
 
 PATH = "graphs\\"
 
@@ -13,17 +14,20 @@ def pickleGraphList(G, f):
     pickle.dump(G, file)
     file.close()
 
-def genGraph(num, edgeCap, weightMax, weightMin = 0):
+def genGraph(num, edgeCap, weightMax, weightMin = 1):
     G = Graph(V=[],E=[],directed = True)
     for i in range(0, num):
         G.addVertex(i)
-    Q = G.V[:]
-    while len(Q) > 0:
-        v = Q[0]
-        while not v == Q[0]:
-            v = Q[random.randint(0,len()-1)]
-        G.addEdge(Q[0], v, random.randint(weightMin, weightMax))
-        Q.pop(0)
+
+    for i in range(0, len(G.V)):
+        if i < len(G.V) - 1:
+            u = G.V[i]
+            v = G.V[i+1]
+        else:
+            u = G.V[-1]
+            v = G.V[0]
+        # print(v.value)
+        G.addEdge(u, v, random.randint(weightMin, weightMax))
     for u in G.V:
         for i in range(edgeCap - 1):
             success = False
@@ -49,25 +53,24 @@ def genGraph(num, edgeCap, weightMax, weightMin = 0):
 
 def parse():
     parser = argparse.ArgumentParser()
-    # parser.add_argument('e', action='store', type = int, help='Number of edges in the graph')
+    parser.add_argument('v', action='store', type = int, help='Number of vertices in the generated graph')
     parser.add_argument('max', action='store', type = int, help='Maximum weight for a given edge')
-    parser.add_argument('--min', dest='min', type = int, action='store', default=0, help='Minimum value for a given edge (default = 0)')
+    parser.add_argument('--min', dest='min', type = int, action='store', default=1, help='Minimum value for a given edge (default = 0)')
     parser.add_argument('f', action='store', type = str, help='File name')
     return parser.parse_args()
 
 def main():
     args = parse()
+    # os.remove(PATH + str(args.f))
     print("Generating data set " +  args.f + "...")
-    for i in range(1, 13):
-        print(i)
-        if 300%(25*i) == 0:
-            print("Generating graph with vertex count " + str(i * 25) + "...")
-            G = genGraph(25 * i, 300//(25*1), args.max, args.min)
-            print("Generation complete.")
-            print("Saving to file...")
-            pickleGraphList(G, PATH + str(args.f))
-            print("File saved.")
-            G = None
+    for i in range(1, args.v+1):
+        print("Generating graph with edge cap " + str(i) + "...")
+        G = genGraph(i, 1, args.max, args.min)
+        print("Generation complete.")
+        print("Saving to file...")
+        pickleGraphList(G, PATH + str(args.f))
+        print("File saved.")
+        G = None
     print("Data set generated and saved.")
 
 

@@ -32,7 +32,6 @@ def bellmanFord(G, s):
     return True
 
 def dijkstra(G, s):
-    # print(G.adj)
     initSingleSource(G, s)
     S = []
     Q = G.V[:]
@@ -53,10 +52,7 @@ def Yen(G, s):
     initSingleSource(G,s) #number vertices arbitrarily from s
     C = [s]
     D = [False] * len(G.V)
-    print("D", len(D))
     while C != []:
-        for v in C:
-            print(v.value)
         for u in G.V:
             edges = G.getAdj(u)
             if u in C or D[u.value]:
@@ -69,11 +65,8 @@ def Yen(G, s):
                 for uv in edges:
                     yenRelax(uv.u, uv.v, uv.weight, D)
         C = []
-        print("D len", len(D))
         for i in range(0, len(D)-1):
-            print(i)
             if D[i]:
-                print("To C",i)
                 C.append(G.V[i])
         D = []
         D = [False] * len(G.V)

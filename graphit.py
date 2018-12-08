@@ -25,26 +25,83 @@ def main():
 
     print("Parsing X axis...")
     x1 = data["edges"]
-    x2 = data["edges"]
     print("Parsing Y axis...")
     y1 = data["dijkstra"]
     y2 = data["bellmanford"]
-    print("Axes plotted.")
+    y3 = data["yen"]
+    y4 = data["fibonacciheap"]
+    print("Axes parsed.")
 
+    name = args.o.split(".")[0] + "-all"
     print("Plotting graph...")
-    plt.plot(x1, y1, label="Dijkstra")
-    plt.plot(x2, y2, label="Bellman-Ford")
+    plt.plot(x1, y1, label="Dijkstra", color="b")
+    plt.plot(x1, y2, label="Bellman-Ford", color="orange")
+    plt.plot(x1, y3, label="FibonacciHeap", color="g")
+    plt.plot(x1, y4, label="Yen", color="r")
     print("Graph plotted.")
     plt.legend(loc='best')
     print("Generating graph labels...")
     plt.xlabel("Edges")
-    plt.ylabel("Times")
-    plt.title("Test")
+    plt.ylabel("Times (ms)")
+    plt.title(name.upper())
     print("Labels generated.")
 
-    print("Saving to " + args.o + "...")
-    plt.savefig(OUTPUTPATH + args.o, bbox_inches="tight")
+    print("Saving to " + name + ".png...")
+    plt.savefig(OUTPUTPATH + name + ".png", bbox_inches="tight")
     print("File saved.")
 
+    plt.close()
 
+    name = args.o.split(".")[0] + "-df"
+    print("Plotting graph...")
+    plt.plot(x1, y1, label="Dijkstra", color="b")
+    plt.plot(x1, y3, label="FibonacciHeap", color="g")
+    print("Graph plotted.")
+    plt.legend(loc='best')
+    print("Generating graph labels...")
+    plt.xlabel("Edges")
+    plt.ylabel("Times (ms)")
+    plt.title(name.upper())
+    print("Labels generated.")
+
+    print("Saving to " + name + ".png...")
+    plt.savefig(OUTPUTPATH + name + ".png", bbox_inches="tight")
+    print("File saved.")
+
+    plt.close()
+
+    name = args.o.split(".")[0] + "-by"
+    print("Plotting graph...")
+    plt.plot(x1, y2, label="Bellman-Ford", color="orange")
+    plt.plot(x1, y4, label="Yen", color="r")
+    print("Graph plotted.")
+    plt.legend(loc='best')
+    print("Generating graph labels...")
+    plt.xlabel("Edges")
+    plt.ylabel("Times (ms)")
+    plt.title(name.upper())
+    print("Labels generated.")
+
+    print("Saving to " + name + ".png...")
+    plt.savefig(OUTPUTPATH + name + ".png", bbox_inches="tight")
+    print("File saved.")
+
+    plt.close()
+
+    name = args.o.split(".")[0] + "-dfy"
+    print("Plotting graph...")
+    plt.plot(x1, y1, label="Dijkstra", color="b")
+    plt.plot(x1, y3, label="FibonacciHeap", color="g")
+    plt.plot(x1, y4, label="Yen", color="r")
+    print("Graph plotted.")
+    plt.legend(loc='best')
+    print("Generating graph labels...")
+    plt.xlabel("Edges")
+    plt.ylabel("Times (ms)")
+    plt.title(name.upper())
+    print("Labels generated.")
+
+    print("Saving to " + name + ".png...")
+    plt.savefig(OUTPUTPATH + name + ".png", bbox_inches="tight")
+    print("File saved.")
 main()
